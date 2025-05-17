@@ -1,3 +1,4 @@
+/// Model class representing an exercise.
 class Exercise {
   final String name;
   final String bodyPart;
@@ -5,6 +6,7 @@ class Exercise {
   final String equipment;
   final String gifUrl;
 
+  /// Creates an [Exercise] instance.
   Exercise({
     required this.name,
     required this.bodyPart,
@@ -13,6 +15,7 @@ class Exercise {
     required this.gifUrl,
   });
 
+  /// Factory constructor to create an [Exercise] from a JSON map.
   factory Exercise.fromJson(Map<String, dynamic> json) {
     return Exercise(
       name: json['name'] ?? 'No name',
@@ -23,4 +26,3 @@ class Exercise {
     );
   }
 }
-
